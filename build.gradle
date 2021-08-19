@@ -1,0 +1,44 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id 'java'
+}
+
+group = 'fr.orezia.mc'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility(JavaVersion.VERSION_16)
+    targetCompatibility(JavaVersion.VERSION_16)
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url = 'https://papermc.io/repo/repository/maven-public/'
+    }
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+    maven { url 'https://jitpack.io' }
+    maven {
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+}
+
+dependencies {
+    implementation 'org.jetbrains:annotations:21.0.1'
+    compileOnly 'io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT'
+    compileOnly 'fr.orezia.mc:oreziacore:3.1'
+    compileOnly "com.github.MilkBowl:VaultAPI:1.7"
+    compileOnly 'me.clip:placeholderapi:2.10.10'
+}
+
+processResources {
+    duplicatesStrategy DuplicatesStrategy.INCLUDE
+    from(sourceSets.main.resources.srcDirs) {
+        filter ReplaceTokens, tokens: [version: version]
+    }
+}
