@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
  * Dao for entity.
  *
  * @param <T> The entity type.
- * @since 4.0
+ * @since 1.0 4.0
  */
 @PublicApi
 public interface EntityDao<T extends IdentifiableWithTechnicalId> extends Dao<T> {

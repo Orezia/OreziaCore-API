@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Event triggered when OreziaCore is reloaded.
  *
- * @since 2.1
+ * @since 1.0 2.1
  */
 public class OreziaCoreReloadEvent extends Event {
 

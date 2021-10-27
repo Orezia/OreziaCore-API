@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Documentation annotation for commands.
  *
- * @since 2.1
+ * @since 1.0 2.1
  */
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.TYPE)

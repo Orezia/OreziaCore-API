@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 /**
  * Document entity dependency as cascading some action.
  *
- * @since 1.0
+ * @since 1.0 1.0
  */
 @Documented
 @Retention(RetentionPolicy.SOURCE)

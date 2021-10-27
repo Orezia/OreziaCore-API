@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
  * Entity identifiable with a business ID.
  *
  * @param <T> The type of the business ID.
- * @since 4.0
+ * @since 1.0 4.0
  */
 public interface IdentifiableWithBusinessId<T extends Serializable> {
 
