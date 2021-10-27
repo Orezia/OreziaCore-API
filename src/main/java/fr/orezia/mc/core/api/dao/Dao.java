@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
  * Dao.
  *
  * @param <T> The type of handled entity.
- * @since 1.0 4.0
+ * @since 1.0
  */
 public interface Dao<T> {
 

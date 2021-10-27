@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Core message entity.
  *
- * @since 1.0 2.1
+ * @since 1.0
  */
 @SerializableAs("CoreMessage")
 public record CoreMessage(@NotNull Map<String, String> messages) implements

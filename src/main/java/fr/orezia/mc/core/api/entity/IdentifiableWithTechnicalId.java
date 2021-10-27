@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Contract;
 /**
  * Entity identifiable with a technical ID.
  *
- * @since 1.0 4.0
+ * @since 1.0
  */
 public interface IdentifiableWithTechnicalId {
 

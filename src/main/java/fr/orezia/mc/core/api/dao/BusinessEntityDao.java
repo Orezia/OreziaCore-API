@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
  *
  * @param <T> The business entity type.
  * @param <I> The business ID type.
- * @since 1.0 4.0
+ * @since 1.0
  */
 @PublicApi
 public interface BusinessEntityDao<T extends IdentifiableWithBusinessId<I>, I extends Serializable> extends Dao<T> {

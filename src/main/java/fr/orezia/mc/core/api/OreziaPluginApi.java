@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * API for orezia plugin.
- * @since 1.0 1.0
+ * @since 1.0
  */
 @PublicApi
 public interface OreziaPluginApi {

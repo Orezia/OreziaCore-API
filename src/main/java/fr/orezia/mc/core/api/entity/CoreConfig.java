@@ -74,7 +74,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * Get for debug value.
    *
    * @return The debug value.
-   * @since 1.0 3.0
+   * @since 1.0
    */
   @Contract(pure = true)
   public boolean debug() {
@@ -86,7 +86,7 @@ public class CoreConfig implements ConfigurationSerializable {
    *
    * @param debug The debug value.
    * @return Itself.
-   * @since 1.0 3.0
+   * @since 1.0
    */
   @Contract(value = "_ -> this", mutates = "this")
   public @NotNull CoreConfig debug(boolean debug) {
@@ -98,7 +98,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * Get the configured database URL.
    *
    * @return The configured database URL.
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public @NotNull String databaseHost() {
@@ -110,7 +110,7 @@ public class CoreConfig implements ConfigurationSerializable {
    *
    * @param databaseHost The new database URL.
    * @return this
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public @NotNull CoreConfig databaseHost(String databaseHost) {
@@ -122,7 +122,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * Get the configured database name.
    *
    * @return The configured database name.
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public @NotNull String databaseName() {
@@ -134,7 +134,7 @@ public class CoreConfig implements ConfigurationSerializable {
    *
    * @param databaseName The new database name.
    * @return this
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public @NotNull CoreConfig databaseName(String databaseName) {
@@ -146,7 +146,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * Get the configured database port number.
    *
    * @return The configured database port number.
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public @NotNull String databasePort() {
@@ -158,7 +158,7 @@ public class CoreConfig implements ConfigurationSerializable {
    *
    * @param databasePort The new database port number.
    * @return this
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public @NotNull CoreConfig databasePort(String databasePort) {
@@ -170,7 +170,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * Get the configured database username.
    *
    * @return The configured database username.
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public @NotNull String databaseUsername() {
@@ -182,7 +182,7 @@ public class CoreConfig implements ConfigurationSerializable {
    *
    * @param databaseUsername The new database username.
    * @return this.
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public CoreConfig databaseUsername(String databaseUsername) {
@@ -194,7 +194,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * Get the configured database password.
    *
    * @return The configured database password.
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public @NotNull String databasePassword() {
@@ -206,7 +206,7 @@ public class CoreConfig implements ConfigurationSerializable {
    *
    * @param databasePassword The new database password.
    * @return this
-   * @since 1.0 4.0
+   * @since 1.0
    */
   @PublicApi
   public @NotNull CoreConfig databasePassword(String databasePassword) {
