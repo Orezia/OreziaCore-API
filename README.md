@@ -4,6 +4,8 @@
 ![MC version](https://img.shields.io/badge/MC-v1.17-green)
 [![GitHub release](https://img.shields.io/badge/release-vX-blue)](https://github.com/Orezia/OreziaTemplate/releases/tag/X)
 
+[![Run build on PR](https://github.com/Orezia/OreziaCore-API/actions/workflows/build_on_pr.yml/badge.svg?branch=main)](https://github.com/Orezia/OreziaCore-API/actions/workflows/build_on_pr.yml)
+
 Template de plugin pour [Orezia](https://oreziamc.fr).
 
 ## Table des matières :
