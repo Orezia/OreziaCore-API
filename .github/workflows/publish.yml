@@ -19,5 +19,4 @@ jobs:
       - name: Publish package
         run: gradle publish
         env:
-          GITHUB_ACTOR: x-access-token
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
