@@ -41,11 +41,11 @@ dependencies {
 publishing {
     repositories {
         maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/Orezia/OreziaCore-API")
+            name = 'GitHubPackages'
+            url = 'https://maven.pkg.github.com/Orezia/OreziaCore-API'
             credentials {
-                username = System.getenv("USERNAME")
-                password = System.getenv("TOKEN")
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
