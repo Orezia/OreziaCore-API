@@ -15,32 +15,30 @@ import org.jetbrains.annotations.NotNull;
 public interface EntityDao<T extends IdentifiableWithTechnicalId> extends Dao<T> {
 
   /**
-   * Retrieve, from persistance, entity matching technical ID.
+   * Check if given ID exists in persistence.
+   *
+   * @param id The entity's ID to check.
+   * @return True if ID exists, false if not.
+   */
+  @PublicApi
+  boolean exists(final @NotNull String id);
+
+  /**
+   * Retrieve, from persistence, entity matching technical ID.
    *
    * @param id The entity's technical ID use.
    * @return The optional found entity.
    */
   @PublicApi
-  @NotNull Optional<T> getById(final int id);
-
-
-  /**
-   * Create entity in persistance.
-   *
-   * @param object The entity object to create in persistance.
-   * @return True if entity is created, false if not.
-   */
-  @PublicApi
-  @NotNull Optional<T> create(final @NotNull T object);
-
+  @NotNull Optional<T> get(final @NotNull String id);
 
   /**
-   * Delete, in persistance, the entity.
+   * Delete, in persistence, the entity.
    *
    * @param id The entity's id.
    * @return True if entity is deleted, false if not.
    */
   @PublicApi
-  boolean delete(final int id);
+  boolean delete(final @NotNull String id);
 
 }
