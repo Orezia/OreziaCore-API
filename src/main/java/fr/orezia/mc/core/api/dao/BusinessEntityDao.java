@@ -17,27 +17,25 @@ import org.jetbrains.annotations.NotNull;
 public interface BusinessEntityDao<T extends IdentifiableWithBusinessId<I>, I extends Serializable> extends Dao<T> {
 
   /**
-   * Retrieve, from persistance, entity matching business ID.
+   * Check if given business ID exists in persistence.
+   *
+   * @param businessId The entity's business ID to check.
+   * @return True if business ID exists, false if not.
+   */
+  @PublicApi
+  boolean exists(final @NotNull I businessId);
+
+  /**
+   * Retrieve, from persistence, entity matching business ID.
    *
    * @param businessId The entity's business ID to use.
    * @return The optional found entity.
    */
   @PublicApi
-  Optional<T> getByBusinessId(final @NotNull I businessId);
-
-
-  /**
-   * Create entity in persistance.
-   *
-   * @param object The entity object to create in persistance.
-   * @return True if entity is created, false if not.
-   */
-  @PublicApi
-  boolean create(final @NotNull T object);
-
+  @NotNull Optional<T> get(final @NotNull I businessId);
 
   /**
-   * Delete, in persistance, the entity.
+   * Delete, in persistence, the entity.
    *
    * @param businessId The entity's business ID.
    * @return True if entity is deleted, false if not.
