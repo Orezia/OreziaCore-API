@@ -14,7 +14,7 @@ public interface Dao<T> {
 
 
   /**
-   * Retrieve, from persistance, all entities.
+   * Retrieve, from persistence, all entities.
    *
    * @return The list of found entities
    */
@@ -22,7 +22,16 @@ public interface Dao<T> {
   @NotNull List<T> getAll();
 
   /**
-   * Update, in persistance, the entity.
+   * Create entity in persistence.
+   *
+   * @param object The entity object to create in persistence.
+   * @return True if entity is created, false if not.
+   */
+  @PublicApi
+  boolean create(final @NotNull T object);
+
+  /**
+   * Update, in persistence, the entity.
    *
    * @param object The new entity value.
    * @return True if entity is updated, false if not.

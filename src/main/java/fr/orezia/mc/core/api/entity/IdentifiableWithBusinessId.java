@@ -21,16 +21,16 @@ public interface IdentifiableWithBusinessId<T extends Serializable> {
    */
   @PublicApi
   @Contract(pure = true)
-  @NotNull T businessId();
+  @NotNull T id();
 
   /**
    * Set the entity's business ID.
    *
-   * @param businessId The entity's business ID.
+   * @param id The entity's business ID.
    * @return The entity itself.
    */
   @PublicApi
   @Contract(value = "_ -> this", mutates = "this")
-  @NotNull IdentifiableWithBusinessId<T> businessId(final @NotNull T businessId);
+  @NotNull IdentifiableWithBusinessId<T> id(final @NotNull T id);
 
 }
