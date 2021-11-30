@@ -30,9 +30,8 @@ public interface Entity<T extends Serializable> {
    * @param id the ID to set
    * @return the current instance
    */
-  @This
   @PublicApi
   @Contract(value = "_ -> this", mutates = "this")
-  @NotNull Entity<T> id(final @NotNull T id);
+  @This @NotNull Entity<T> id(final @NotNull T id);
 
 }
