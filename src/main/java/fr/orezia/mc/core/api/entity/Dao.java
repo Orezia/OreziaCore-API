@@ -49,7 +49,7 @@ public interface Dao<E extends Entity<T>, T extends Serializable> {
    * @return {@code true} if the {@link E entity} has been updated, {@code false} otherwise
    */
   @PublicApi
-  boolean update(final @NotNull T entity);
+  boolean update(final @NotNull E entity);
 
   /**
    * Deletes the {@link E entity} matching the given {@link T ID} from persistence.
