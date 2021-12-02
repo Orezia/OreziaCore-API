@@ -41,5 +41,6 @@ public @interface Cascade {
     DELETE,
     CREATE,
     UPDATE,
+    ALL
   }
 }
