@@ -1,0 +1,29 @@
+# This workflow will build a Java project with Gradle
+
+name: Gradle build with cache
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: Checkouts sources
+    - uses: actions/setup-java@v2
+      name: Sets up JDK 16
+      with:
+        distribution: 'adopt'
+        java-version: 16
+    - uses: burrunan/gradle-cache-action@v1
+      name: Builds with Gradle (cached)
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        arguments: --no-daemon build
+        gradle-version: wrapper

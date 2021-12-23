@@ -1,4 +1,4 @@
-name: Plublish package to Github Packages
+name: Publishes package to Github Packages
 on:
   push:
     branches: [ main ]
@@ -13,12 +13,16 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Java
-        uses: actions/setup-java@v2
+        name: Checkouts sources
+      - uses: actions/setup-java@v2
+        name: Sets up JDK 16
         with:
           java-version: '16'
           distribution: 'adopt'
-      - name: Publish package
-        run: gradle publish
+      - uses: burrunan/gradle-cache-action@v1
+        name: Publishes with Gradle (cached)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          arguments: publish
+          gradle-version: wrapper
