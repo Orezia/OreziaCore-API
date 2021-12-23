@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'fr.orezia.mc'
-version = '1.0-SNAPSHOT'
+version = rootProject.api_version
 
 java {
     sourceCompatibility(JavaVersion.VERSION_16)
@@ -31,7 +31,7 @@ repositories {
 
 dependencies {
     api 'org.jetbrains:annotations:22.0.0'
-    api ('io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT') {
+    api ("io.papermc.paper:paper-api:${rootProject.mc_version}-R0.1-SNAPSHOT") {
         exclude group: 'commons-lang'
     }
     api "org.bstats:bstats-bukkit:2.2.1"
