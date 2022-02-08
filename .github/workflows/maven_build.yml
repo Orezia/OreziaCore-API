@@ -1,0 +1,25 @@
+# This workflow will build a Java project with Gradle
+
+name: Maven build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkouts sources
+      - uses: actions/setup-java@v2
+        name: Sets up JDK 17
+        with:
+          distribution: 'adopt'
+          java-version: 17
+      - name: Build with maven
+        run: mvn --batch-mode --update-snapshots verify
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
