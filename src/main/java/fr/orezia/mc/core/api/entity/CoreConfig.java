@@ -41,11 +41,11 @@ public class CoreConfig implements ConfigurationSerializable {
     final CoreConfig coreConfig = new CoreConfig();
 
     coreConfig.debug((Boolean) data.getOrDefault("debug", false))
-        .databaseHost((String) data.getOrDefault("hote_bdd", "localhost"))
-        .databaseName((String) data.getOrDefault("nom_bdd", "database"))
-        .databasePort((String) data.getOrDefault("port_bdd", "3306"))
-        .databaseUsername((String) data.getOrDefault("utilisateur_bdd", "root"))
-        .databasePassword((String) data.getOrDefault("mdp_dbb", "password"));
+        .databaseHost((String) data.getOrDefault("db_host", "localhost"))
+        .databaseName((String) data.getOrDefault("db_name", "database"))
+        .databasePort((String) data.getOrDefault("db_port", "3306"))
+        .databaseUsername((String) data.getOrDefault("db_user", "root"))
+        .databasePassword((String) data.getOrDefault("db_pass", "password"));
 
     return coreConfig;
   }
@@ -61,11 +61,11 @@ public class CoreConfig implements ConfigurationSerializable {
     final Map<String, Object> map = new HashMap<>();
 
     map.put("debug", debug);
-    map.put("hote_bdd", databaseHost);
-    map.put("nom_bdd", databaseName);
-    map.put("port_bdd", databasePort);
-    map.put("utilisateur_bdd", databaseUsername);
-    map.put("mdp_dbb", databasePassword);
+    map.put("db_host", databaseHost);
+    map.put("db_name", databaseName);
+    map.put("db_port", databasePort);
+    map.put("db_user", databaseUsername);
+    map.put("db_pass", databasePassword);
 
     return map;
   }
