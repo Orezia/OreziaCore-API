@@ -31,6 +31,7 @@ Maven :
   </repository>
 </repositories>
 ```
+
 ```xml
 <dependencies>
   <dependency>
@@ -51,6 +52,7 @@ repositories {
     }
 }
 ```
+
 ```groovy
 dependencies {
     implementation group: 'fr.orezia.mc', name: 'OreziaCore-API', version: VERSION
@@ -68,4 +70,12 @@ Si votre plugin est hard-dépendant d'`OreziaCore`, vous pouvez considérer la d
 ## Version :
 
 - __1.0__
-    - TODO
+  - \+ Définition des configurations et messages globaux
+  - \+ Définition de l'évènement de rechargement
+  - \+ Annotation pour cascader les opérations sur les entités
+  - \+ Annotation pour les champs éphémères
+  - \+ Annotation pour les API publiques
+  - \+ Définition d'un expert
+  - \+ Définition d'une commande
+  - \+ Définition d'un plugin rechargeable
+  - \+ Définition d'un plugin Orezia
