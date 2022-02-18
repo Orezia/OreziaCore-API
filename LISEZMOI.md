@@ -6,20 +6,20 @@
 
 [![Maven build](https://github.com/Orezia/OreziaCore-API/actions/workflows/maven_build.yml/badge.svg)](https://github.com/Orezia/OreziaCore-API/actions/workflows/maven_build.yml)
 
-Public API for the `OreziaCore` plugin.
+API publique pour le plugin `OreziaCore`.
 
-[Version française](./LISEZMOI.md)
+[English version](./README.md)
 
-## Table of contents :
+## Table des matières :
 
-- [Integrating](#integrating-)
-  - [Soft-dependency](#soft-dependency-)
-  - [Hard-dependency](#hard-dependency-)
+- [Intégration](#intergration-)
+  - [Soft-dépendance](#soft-dependance-)
+  - [Hard-dépendance](#hard-dependance-)
 - [Version](#version-)
 
-## Integrating :
+## Intégration :
 
-In order to integrate your plugin with `OreziaCore`, you have to add `OreziaCore-API` as dependency of your project.
+Pour intégrer votre plugin avec `OreziaCore`, vous devez ajouter `OreziaCore-API` parmi les dépendances de votre projet.
 
 Maven :
 
@@ -59,23 +59,23 @@ dependencies {
 }
 ```
 
-### Soft-dependency :
+### Soft-dépendance :
 
-In order to add `OreziaCore` as soft-dependency, you have to shade the dependency `OreziaCore-API` in your plugin (i.e. include the dependency in your plugin JAR).
+Pour être soft-dépendant d'`OreziaCore`, vous devez embarquer la dépendance `OreziaCore-API` dans votre plugin (c'est-à-dire inclure la dépendance dans le JAR de votre plugin).
 
-### Hard-dependency :
+### Hard-dépendance :
 
-If your plugin is hard-dependent on `OreziaCore`, you can consider the dependency `OreziaCore-API` as provided.
+Si votre plugin est hard-dépendant d'`OreziaCore`, vous pouvez considérer la dépendance `OreziaCore-API` comme "provided".
 
 ## Version :
 
 - __1.0__
-  - \+ Definition of core configurations and messages
-  - \+ Definition of the reload event
-  - \+ Annotation for cascading operations on entities
-  - \+ Annotation for transient fields
-  - \+ Annotation for public API
-  - \+ Definition of a command expert
-  - \+ Definition of a command
-  - \+ Definition of a reloadable plugin
-  - \+ Definition of an Orezia plugin
+  - \+ Définition des configurations et messages globaux
+  - \+ Définition de l'évènement de rechargement
+  - \+ Annotation pour cascader les opérations sur les entités
+  - \+ Annotation pour les champs éphémères
+  - \+ Annotation pour les API publiques
+  - \+ Définition d'un expert
+  - \+ Définition d'une commande
+  - \+ Définition d'un plugin rechargeable
+  - \+ Définition d'un plugin Orezia
