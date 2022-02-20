@@ -5,6 +5,7 @@ package fr.orezia.mc.core.api;
  *
  * @since 1.0
  */
+@FunctionalInterface
 public interface Reloadable {
 
   /**

@@ -36,11 +36,29 @@ public @interface Cascade {
    * Type of cascade.
    */
   enum CascadeType {
+    /**
+     * No operation is being cascaded.
+     */
     NONE,
+    /**
+     * The fetching operations are being cascaded.
+     */
     FETCH,
+    /**
+     * The deleting operations are being cascaded.
+     */
     DELETE,
+    /**
+     * The creating operations are being cascaded.
+     */
     CREATE,
+    /**
+     * The updating operations are being cascaded.
+     */
     UPDATE,
+    /**
+     * All operations are being cascaded.
+     */
     ALL
   }
 }

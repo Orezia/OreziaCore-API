@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 /**
  * Annotate field as transient.
  */
-@Target({ElementType.FIELD})
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Transient {
