@@ -26,7 +26,7 @@ public record CoreMessage(@NotNull Map<String, String> messages) implements
   }
 
   /**
-   * Create a {@link CoreMessage} from yaml data.
+   * Create a {@code CoreMessage} from yaml data.
    *
    * @param data The YAML data to deserialize
    * @return The created object.
@@ -37,7 +37,7 @@ public record CoreMessage(@NotNull Map<String, String> messages) implements
   public static CoreMessage deserialize(@NotNull final Map<String, Object> data) {
 
     final Map<String, String> result = new HashMap<>();
-    for (Entry<String, Object> entry : data.entrySet()) {
+    for (final Entry<String, Object> entry : data.entrySet()) {
       if (entry.getValue() instanceof String stringValue) {
         result.put(entry.getKey(), stringValue);
       }

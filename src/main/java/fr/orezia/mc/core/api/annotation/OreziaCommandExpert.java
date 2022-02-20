@@ -12,7 +12,6 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.TYPE)
-@SuppressWarnings("unused")
 public @interface OreziaCommandExpert {
 
   /**
@@ -43,7 +42,6 @@ public @interface OreziaCommandExpert {
    *
    * @return the command's usage
    */
-  @SuppressWarnings("unused")
   String usage() default "";
 
   /**

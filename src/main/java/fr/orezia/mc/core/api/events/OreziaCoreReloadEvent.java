@@ -21,7 +21,7 @@ public class OreziaCoreReloadEvent extends Event {
   /**
    * Valued constructor.
    *
-   * @param originator The reload originator.
+   * @param originator The event originator.
    */
   public OreziaCoreReloadEvent(final @NotNull CommandSender originator) {
     this.originator = originator;
@@ -43,11 +43,11 @@ public class OreziaCoreReloadEvent extends Event {
   @Override
   @Contract(pure = true)
   public @NotNull HandlerList getHandlers() {
-    return OreziaCoreReloadEvent.getHandlerList();
+    return getHandlerList();
   }
 
   /**
-   * Get the reload originator.
+   * Get the event originator.
    *
    * @return The command originator.
    */

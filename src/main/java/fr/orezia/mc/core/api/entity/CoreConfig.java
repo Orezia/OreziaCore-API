@@ -12,10 +12,11 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Entity for core config.
  */
+@PublicApi
 @SerializableAs("CoreConfig")
 public class CoreConfig implements ConfigurationSerializable {
 
-  private boolean debug = false;
+  private boolean debug;
   private @NotNull String databaseHost = "localhost";
   private @NotNull String databaseName = "database";
   private @NotNull String databasePort = "3306";
@@ -23,17 +24,10 @@ public class CoreConfig implements ConfigurationSerializable {
   private @NotNull String databasePassword = "password";
 
   /**
-   * Default constructor.
-   */
-  public CoreConfig() {
-    super();
-  }
-
-  /**
    * Deserialize Map representing this class.
    *
    * @param data The data to deserialize.
-   * @return The new instance of {@link CoreConfig} with data from given map.
+   * @return The new instance of {@code CoreConfig} with data from given map.
    */
   @Internal
   @Contract("_ -> new")
@@ -76,6 +70,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * @return The debug value.
    * @since 1.0
    */
+  @PublicApi
   @Contract(pure = true)
   public boolean debug() {
     return debug;
@@ -88,8 +83,9 @@ public class CoreConfig implements ConfigurationSerializable {
    * @return Itself.
    * @since 1.0
    */
+  @PublicApi
   @Contract(value = "_ -> this", mutates = "this")
-  public @NotNull CoreConfig debug(boolean debug) {
+  public @NotNull CoreConfig debug(final boolean debug) {
     this.debug = debug;
     return this;
   }
@@ -113,7 +109,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * @since 1.0
    */
   @PublicApi
-  public @NotNull CoreConfig databaseHost(String databaseHost) {
+  public @NotNull CoreConfig databaseHost(final String databaseHost) {
     this.databaseHost = databaseHost;
     return this;
   }
@@ -137,7 +133,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * @since 1.0
    */
   @PublicApi
-  public @NotNull CoreConfig databaseName(String databaseName) {
+  public @NotNull CoreConfig databaseName(final String databaseName) {
     this.databaseName = databaseName;
     return this;
   }
@@ -161,7 +157,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * @since 1.0
    */
   @PublicApi
-  public @NotNull CoreConfig databasePort(String databasePort) {
+  public @NotNull CoreConfig databasePort(final String databasePort) {
     this.databasePort = databasePort;
     return this;
   }
@@ -185,7 +181,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * @since 1.0
    */
   @PublicApi
-  public CoreConfig databaseUsername(String databaseUsername) {
+  public CoreConfig databaseUsername(final String databaseUsername) {
     this.databaseUsername = databaseUsername;
     return this;
   }
@@ -209,7 +205,7 @@ public class CoreConfig implements ConfigurationSerializable {
    * @since 1.0
    */
   @PublicApi
-  public @NotNull CoreConfig databasePassword(String databasePassword) {
+  public @NotNull CoreConfig databasePassword(final String databasePassword) {
     this.databasePassword = databasePassword;
     return this;
   }
