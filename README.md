@@ -70,6 +70,8 @@ If your plugin is hard-dependent on `OreziaCore`, you can consider the dependenc
 ## Version :
 
 - __1.0__
+  - \+ Annotation `@UnsafeStaticInitialization` 
+  - \+ Annotation `@SafeStaticInitialization` 
   - \+ Definition of core configurations and messages
   - \+ Definition of the reload event
   - \+ Annotation for cascading operations on entities
