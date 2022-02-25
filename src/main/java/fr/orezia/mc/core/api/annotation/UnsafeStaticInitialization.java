@@ -1,5 +1,6 @@
 package fr.orezia.mc.core.api.annotation;
 
+import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -12,6 +13,7 @@ import org.jetbrains.annotations.NonNls;
  *
  * @since 1.0
  */
+@Documented
 @Retention(RetentionPolicy.CLASS)
 @Target({ElementType.METHOD, ElementType.FIELD})
 public @interface UnsafeStaticInitialization {
