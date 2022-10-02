@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>oreziacore-api</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
 
   <parent>
     <groupId>fr.orezia.mc</groupId>

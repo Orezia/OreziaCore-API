@@ -2,7 +2,7 @@
 
 ![Java version](https://img.shields.io/badge/java-^17-yellow)
 ![MC version](https://img.shields.io/badge/MC-v1.19.2-green)
-[![GitHub release](https://img.shields.io/badge/release-vX-blue)](https://github.com/dederobert/OreziaCore-API/releases/tag/X)
+[![GitHub release](https://img.shields.io/badge/release-v1.0-blue)](https://github.com/Orezia/OreziaCore-API/releases/tag/v1.0)
 
 [![Maven build](https://github.com/Orezia/OreziaCore-API/actions/workflows/maven_build.yml/badge.svg)](https://github.com/Orezia/OreziaCore-API/actions/workflows/maven_build.yml)
 
@@ -69,7 +69,9 @@ If your plugin is hard-dependent on `OreziaCore`, you can consider the dependenc
 
 ## Version :
 
-- __1.0__
+- __v1.1__
+  - Préparation de la prochaine version
+- __[v1.0](https://github.com/Orezia/OreziaCore-API/releases/tag/v1.0)__
   - \+ Annotation `@UnsafeStaticInitialization` 
   - \+ Annotation `@SafeStaticInitialization` 
   - \+ Definition of core configurations and messages
